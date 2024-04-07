@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>蒸汽洪流</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+	<script type="importmap">
+		{
+		  "imports": {
+			"@lodash/last": "https://unpkg.com/lodash-es@4.17.21/last.js"
+		  }
+		}
+	</script>
+	<div class="container">
+	  <div class="menu">
+		<ul>
+		  <li><a href="#">菜单项1</a></li>
+		  <li><a href="#">菜单项2</a></li>
+		  <li><a href="#">菜单项3</a></li>
+		  <li><a href="#">菜单项4</a></li>
+		</ul>
+	  </div>
+	  <div class="textbox-container">
+		<textarea placeholder="输入" id="inputText"></textarea>
+		<span>
+			&rarr;
+			<select id="mode">
+			  <option value="1">引号 + 逗号</option>
+			  <option value="2">仅引号</option>
+			  <option value="3">仅逗号</option>
+			</select>
+		</span>
+		<textarea placeholder="输出" id="outputText"></textarea>
+	  </div>
+	</div>
+
+    <script type="module" src="./index.js"></script>
+</body>
