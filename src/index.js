@@ -2,11 +2,13 @@ import { setup, breakdown} from './quote.js';
 
 const textarea = document.getElementById('inputText');
 const outPutText = document.getElementById('outputText');
-const mode = document.getElementById('mode');
+const seperator = document.getElementById('seperator');
+const quote = document.getElementById('quote');
 
 function updateOutPut() {
-  outPutText.value = setup(breakdown(textarea.value), mode.value);
+  outPutText.value = setup(breakdown(textarea.value), seperator.value, quote.value);
 }
 
 textarea.addEventListener('input', updateOutPut);
-mode.addEventListener('change', updateOutPut);
+seperator.addEventListener('change', updateOutPut);
+quote.addEventListener('change', updateOutPut);

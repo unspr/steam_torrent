@@ -26,10 +26,16 @@
 		<textarea placeholder="输入" id="inputText"></textarea>
 		<span>
 			&rarr;
-			<select id="mode">
-			  <option value="1">引号 + 逗号</option>
-			  <option value="2">仅引号</option>
-			  <option value="3">仅逗号</option>
+			<select id="seperator">
+			  <option value=",">逗号</option>
+			  <option value=" ">空格</option>
+			  <option value="&#10;">换行</option>
+			  <option value=",&#10;">逗号 + 换行</option>
+			  <option value=", ">逗号 + 空格</option>
+			</select>
+			<select id="quote">
+				<option value="'">单引号</option>
+				<option value='"'>双引号</option>
 			</select>
 		</span>
 		<textarea readonly placeholder="输出" id="outputText"></textarea>

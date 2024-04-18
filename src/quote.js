@@ -22,8 +22,6 @@ export function breakdown(txt) {
 	return as;
 }
 
-export function setup(as, value) {
-	const seperators = ['1', '3'].includes(value) ? ',\n' : '\n';
-	const quote = ['1', '2'].includes(value) ? '"' : '';
-	return as.map(a => `${quote}${a}${quote}`).join(seperators)
+export function setup(as, seperator, quote) {
+	return as.map(a => `${quote}${a}${quote}`).join(seperator)
 }
