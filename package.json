@@ -3,5 +3,8 @@
 		"http-server": "^14.1.1",
 		"lodash": "^4.17.21",
 		"vitest": "^1.4.0"
+	},
+	"scripts": {
+		"test": "vitest --run"
 	}
 }

@@ -6,6 +6,7 @@ export function breakdown(txt) {
 		.split('\n')
 		.flatMap(str => str.split(','))
         .map(o => o.trim())
+		.filter(Boolean)
 		.map(str => {
 			const chars = str.split('');
 			if (decorators.includes(chars[0])) {
