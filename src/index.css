@@ -61,8 +61,10 @@
   color: white;
   border: none;
   cursor: pointer;
+  /*
   position: absolute;
   left: 47%;
+  */
 }
 
 .textbox-container button:hover {
