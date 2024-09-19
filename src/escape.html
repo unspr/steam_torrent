@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒸汽洪流</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<div class="container">
+    <div class="menu">
+        <ul>
+            <li><a href="./index.html">Format</a></li>
+            <li><a href="./difference.html">Difference</a></li>
+            <li><a href="./escape.html">Escape</a></li>
+            <li><a href="#">菜单项4</a></li>
+        </ul>
+    </div>
+    <div class="textbox-container">
+        <textarea placeholder="输入" id="inputText"></textarea>
+        <span>&rarr;</span>
+        <textarea readonly placeholder="输出" id="outputText"></textarea>
+    </div>
+</div>
+
+<script type="module">
+    const inputText = document.getElementById('inputText');
+    const outPutText = document.getElementById('outputText');
+
+    inputText.addEventListener('input', () => {
+        outPutText.value = eval(`"${inputText.value}"`);
+    });
+</script>
+</body>

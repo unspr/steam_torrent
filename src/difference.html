@@ -9,7 +9,7 @@
 	<script type="importmap">
 		{
 		  "imports": {
-			"lodash/fp/defference": "https://unpkg.com/lodash-es@4.17.21/difference.js"
+			"lodash/fp/difference": "https://unpkg.com/lodash-es@4.17.21/difference.js"
 		  }
 		}
 	</script>
@@ -18,7 +18,7 @@
 		<ul>
 		  <li><a href="./index.html">Format</a></li>
 		  <li><a href="./difference.html">Difference</a></li>
-		  <li><a href="#">菜单项3</a></li>
+          <li><a href="./escape.html">Escape</a></li>
 		  <li><a href="#">菜单项4</a></li>
 		</ul>
 	  </div>
@@ -35,30 +35,30 @@
 	</div>
 
     <script type="module">
-		import defference from 'lodash/fp/defference';
-		
+		import difference from 'lodash/fp/difference';
+
 		const a = document.getElementById('inputAText');
 		const b = document.getElementById('inputBText');
 		const outPutText = document.getElementById('outputText');
-		
+
 		function diffAndUpdate() {
 			const as = a.value.split(',');
 			const bs = b.value.split(',');
-			
-			const cs = [...new Set(defference(as, bs))];
+
+			const cs = [...new Set(difference(as, bs))];
 			outPutText.value = cs.join(',\n');
 		}
-		
+
 		a.addEventListener('input', diffAndUpdate);
 		b.addEventListener('input', diffAndUpdate);
-		
+
 		function x() {
 			const c = a.value;
 			a.value = b.value;
 			b.value = c;
 			diffAndUpdate();
 		}
-		
+
 		window.x = x;
 	</script>
 </body>
